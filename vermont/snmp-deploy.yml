@@ -1,0 +1,54 @@
+---
+- name: Install SNMP v2
+  hosts: dizzybox
+  become: yes
+
+  tasks:
+    - name: Install SNMP on Debian-based systems
+      apt:
+        name: snmp
+        state: present
+      when: ansible_distribution in ['Ubuntu', 'Debian']
+
+    - name: Install SNMP on Red Hat-based systems
+      yum:
+        name: net-snmp
+        state: present
+      when: ansible_distribution in ['CentOS', 'Red Hat']
+
+    - name: Install SNMP on Arch Linux
+      pacman:
+        name: net-snmp
+        state: present
+      when: ansible_distribution == 'Archlinux'
+
+    - name: Configure SNMP Community String
+      ansible.builtin.lineinfile:
+        path: /etc/snmp/snmpd.conf
+        line: "rocommunity SuperbOwl69"
+        insertafter: EOF
+      when: ansible_distribution != 'Archlinux'
+
+    - name: Comment out or replace agentaddress line
+      ansible.builtin.lineinfile:
+        path: /etc/snmp/snmpd.conf
+        regexp: '^agentaddress'
+        line: 'agentaddress 0.0.0.0'
+      when: ansible_distribution != 'Archlinux'
+
+    - name: Create /etc/snmp/ directory
+      command: mkdir -p /etc/snmp/
+      when: ansible_distribution == 'Archlinux'
+
+    - name: Configure snmpd.conf (arch)
+      copy:
+        content: | 
+          agentaddress 0.0.0.0
+          rocommunity SuperbOwl69
+        dest: /etc/snmp/snmpd.conf
+      when: ansible_distribution == 'Archlinux'
+
+    - name: Restart SNMP Service
+      ansible.builtin.service:
+        name: snmpd
+        state: restarted
