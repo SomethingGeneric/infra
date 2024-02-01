@@ -1,6 +1,6 @@
 ---
 - name: Install SNMP v2
-  hosts: dizzybox
+  hosts: all
   become: yes
 
   tasks:
