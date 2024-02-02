@@ -15,3 +15,4 @@
 
 # Other things
 * Move Gamerbot and NPM on Dockerboy under portainer
+* Replace mastodon with a less shit server
