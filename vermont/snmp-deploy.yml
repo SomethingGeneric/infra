@@ -10,6 +10,12 @@
         state: present
       when: ansible_distribution in ['Ubuntu', 'Debian']
 
+    - name: Install SNMPD on Debian-based systems
+      apt:
+        name: snmpd
+        state: present
+      when: ansible_distribution in ['Ubuntu', 'Debian']
+
     - name: Install SNMP on Red Hat-based systems
       yum:
         name: net-snmp
