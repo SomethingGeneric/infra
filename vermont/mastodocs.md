@@ -16,4 +16,14 @@ Followed the official Mastodon guide snapshotted at: http://web.archive.org/web/
 * DeviantOllam
 * Crystal Linux (lol)
 * CyberTech
+* nixCraft
+* ProPublica
+* Hackermemes (ionull.infosec.exchange)
+* Em0nM4stodon
+* Dissent Doe
+* Mozilla News (??)
+* @MrLovenstein@mastodon.social
+* Metacurity
+* Nasa@social.beachcom.org
+* SwiftOnSecurity
 * ???
