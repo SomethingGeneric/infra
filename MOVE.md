@@ -1,6 +1,4 @@
 # Services on Falcon that should be somewhere else
-
-* Vaultwarden (docker) -> VT Proxmox
 * Dashy (docker) -> VT Proxmox
 * TubeArchivist (docker) -> MD Proxmox (?)
 * Planka (docker) -> VT Proxmox
@@ -11,3 +9,9 @@
 * MusicKat (JMusicBot) -> VT Proxmox (and dockerize??)
 * Code Server -> VT Proxmox
 * xrdp -> VT Proxmox (second jump box?)
+
+# Moved
+* Vaultwarden (docker) -> VT Proxmox
+
+# Other things
+* Move Gamerbot and NPM on Dockerboy under portainer
