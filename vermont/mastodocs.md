@@ -6,3 +6,14 @@
 
 ## Install Guide
 Followed the official Mastodon guide snapshotted at: http://web.archive.org/web/20240201112637/https://docs.joinmastodon.org/admin/install/
+
+## People I was following
+* Brian Krebs
+* CBC News (idk why)
+* EFF
+* TOR
+* Mastodon
+* DeviantOllam
+* Crystal Linux (lol)
+* CyberTech
+* ???
