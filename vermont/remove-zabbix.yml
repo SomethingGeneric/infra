@@ -1,0 +1,12 @@
+---
+- name: Remove Zabbix (send it to hell)
+  hosts: vms
+  become: yes
+
+  tasks:
+    - name: Remove zabbix files
+      command: rm -rf /home/matt/*zabbix*
+      when: ansible_distribution in ['Ubuntu', 'Debian']
+    - name: Remove all zabbix packages
+      command: apt remove -y zabbix-*
+      when: ansible_distribution in ['Ubuntu', 'Debian']
