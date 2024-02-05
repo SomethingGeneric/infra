@@ -9,7 +9,7 @@
     - name: Upgrade pkgs
       command: apt upgrade -y
     - name: Install random utils
-      command: apt-get install -y apt-transport-https ca-certificates curl wget gpg micro
+      command: apt-get install -y apt-transport-https ca-certificates curl wget gpg micro htop
     - name: Some weird IPv4 Net Thing
       lineinfile:
         line: | 
