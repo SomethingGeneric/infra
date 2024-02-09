@@ -1,0 +1,23 @@
+---
+- name: Deploy Wazuh Agent
+  hosts: all
+  become: yes
+  
+  tasks:
+    - name: Setup Wazuh Agent (Debian/Ubuntu)
+      shell: |
+        apt update && apt install wget -y
+        wget https://packages.wazuh.com/4.x/apt/pool/main/w/wazuh-agent/wazuh-agent_4.7.2-1_amd64.deb
+        WAZUH_MANAGER="10.0.1.16" WAZUH_AGENT_NAME="$(cat /etc/hostname)" dpkg -i ./wazuh-agent_4.7.2-1_amd64.deb
+        systemctl daemon-reload
+        systemctl enable --now wazuh-agent
+        rm wazuh*.deb
+      when: ansible_distribution in ['Ubuntu', 'Debian']
+    - name: Setup Wazuh Agent (CentOS/Rocky/Fedora/RHEL)
+      shell: |
+        curl -o wazuh-agent-4.7.2-1.x86_64.rpm https://packages.wazuh.com/4.x/yum/wazuh-agent-4.7.2-1.x86_64.rpm
+        WAZUH_MANAGER="10.0.1.16" WAZUH_AGENT_NAME="$(cat /etc/hostname)" rpm -ihv wazuh-agent-4.7.2-1.x86_64.rpm
+        rm wazuh*.rpm
+        systemctl daemon-reload
+        systemctl enable --now wazuh-agent
+      when: ansible_distribution in ['Fedora', 'Rocky', 'CentOS', 'RHEL']
