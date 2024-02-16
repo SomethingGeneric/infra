@@ -1,6 +1,5 @@
 import os
 import requests
-import fileinput
 
 BASE_URL = "https://git.goober.cloud/api/v1"
 USERNAME = "renovate"
@@ -76,19 +75,17 @@ def main():
                 all_repos.append(repo)
         #print()
 
-    fstr = "\"repositories\": [" + ", ".join([f"\"{repo}\"" for repo in all_repos]) + "],\n"
-
-    # Specify the path to the config.js file
-    config_file = "config.js"
-
-    # Read the contents of the file
-    with fileinput.FileInput(config_file, inplace=True) as file:
-        for line in file:
-            if line.startswith("repositories"):
-                # Replace the line with the contents of fstr
-                print(fstr.strip())
-            else:
-                print(line, end="")
+    fstr = "  \"repositories\": [" + ", ".join([f"\"{repo}\"" for repo in all_repos]) + "],"
+    old_config = open("config.js").read().split("\n")
+    new_config = []
+    for line in old_config:
+        if "repositories" in line:
+            new_config.append(fstr)
+        else:
+            new_config.append(line)
+    os.remove("config.js")
+    with open("config.js", "w") as f:
+        f.write("\n".join(new_config))
     
 
 if __name__ == "__main__":
