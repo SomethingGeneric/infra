@@ -19,6 +19,8 @@
         - libreadline-dev
         - zlib1g-dev
         - build-essential
+        - libffi-dev
+        - libyaml-dev
     - name: Install rbenv
       shell: |
         git clone https://github.com/rbenv/rbenv.git ~/.rbenv
@@ -35,16 +37,9 @@
       with_items:
         - postgresql
         - postgresql-client
-    - name: Create postgres user
-      postgresql_user:
-        db: postgres
-        name: maybe
-        password: maybe
-        priv: "*.*:ALL"
-    - name: Create postgres database
-      postgresql_db:
-        name: maybe
-        owner: maybe
+    - name: PSQL DB and User
+      shell: |
+        # your mom
     - name: Clone Maybe Finance
       shell: | 
         git clone https://github.com/maybe-finance/maybe ~/maybe

@@ -1,0 +1,19 @@
+---
+- name: Deploy QEMU Guest Agent
+  hosts: all
+  become: yes
+  
+  tasks:
+    - name: Setup QEMU Agent (Debian/Ubuntu)
+      shell: |
+        apt update
+        apt install qemu-guest-agent -y
+        #systemctl daemon-reload
+        #systemctl enable --now qemu-guest-agent
+      when: ansible_distribution in ['Ubuntu', 'Debian']
+    - name: Setup QEMU Agent (CentOS/Rocky/Fedora/RHEL)
+      shell: |
+        yum -y install qemu-guest-agent
+        #systemctl daemon-reload
+        #systemctl enable --now qemu-guest-agent
+      when: ansible_distribution in ['Fedora', 'Rocky', 'CentOS', 'RHEL']
