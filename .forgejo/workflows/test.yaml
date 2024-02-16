@@ -2,5 +2,7 @@ on: [push]
 jobs:
   test:
     runs-on: docker
+    container:
+      image: archlinux:latest
     steps:
       - run: echo All Good!!
