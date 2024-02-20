@@ -20,7 +20,7 @@ ssl_domains = [
 ]
 
 with open(fn, 'r') as file:
-    reader = csv.reader(file, delimiter=' ')
+    reader = csv.reader(file)
     for row in reader:
         domain = row[0]
 
