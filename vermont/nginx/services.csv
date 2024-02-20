@@ -6,8 +6,8 @@ goober.cloud http://10.0.1.11:80
 graphana.vt.mattcompton.dev http://10.0.1.8:3030
 mattcompton.dev http://10.0.1.4:80
 ntfy.goober.cloud http://10.0.1.13:80
-pve.mattcompton.dev http://10.0.1.12:8006
-pve.goober.cloud http://10.0.1.12:8006
+pve.mattcompton.dev https://10.0.1.12:8006
+pve.goober.cloud https://10.0.1.12:8006
 repo.dizzybox.org http://10.0.1.23:80
 social.goober.cloud http://10.0.1.15:80
 vault.goober.cloud http://10.0.1.2:89
