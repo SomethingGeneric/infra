@@ -24,6 +24,8 @@ with open(fn, 'r') as file:
     for row in reader:
         domain = row[0]
 
+        ssl_dom = None
+
         for dom in ssl_domains:
             if dom in domain:
                 ssl_dom = dom
