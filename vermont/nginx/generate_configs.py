@@ -1,5 +1,11 @@
 import os
 import csv
+import sys
+
+fn = "services.csv"
+
+if len(sys.argv) > 1:
+    fn = sys.argv[1]
 
 if not os.path.exists("conf"):
     os.makedirs("conf")
@@ -13,7 +19,7 @@ ssl_domains = [
     "champ.support"
 ]
 
-with open('services.csv', 'r') as file:
+with open(fn, 'r') as file:
     reader = csv.reader(file, delimiter=' ')
     for row in reader:
         domain = row[0]
