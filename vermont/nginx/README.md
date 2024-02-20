@@ -8,11 +8,11 @@
 4. `sudo cp conf/* /etc/nginx/sites-enabled/.`
 5. `sudo chown -R root:root /etc/nginx/sites-enabled`
 
-## Domains to move
-* `graphana.vt.mattcompton.dev` -> `graphana.mattcompton.dev`
-* `pve1.vt.mattcomptin.dev` -> `pve.mattcompton.dev` or `pve.goober.cloud` ?
+## Services.csv Syntax
+`domain forwarded_url alias_domain`
+Example: `mattcompton.dev https://your.mom:69 www.mattcompton.dev`
 
-## All Domains
+## Have SSL certs for
 * `champ.support`
 * `goober.cloud`
 * `dizzybox.org`

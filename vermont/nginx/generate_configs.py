@@ -37,8 +37,13 @@ with open(fn, 'r') as file:
             print("No cert found.")
 
         route = row[1]
+
+        sn = domain
+
+        if len(row) > 2:
+            sn += " " + row[2]
         
-        new = base_conf.replace("DOMAIN", domain).replace("ROUTE", route).replace("SSLNAME", ssl_dom)
+        new = base_conf.replace("DOMAIN", sn).replace("ROUTE", route).replace("SSLNAME", ssl_dom)
 
         fn = domain.replace(".", "_")
 
