@@ -35,6 +35,7 @@ with open(fn, 'r') as file:
             print(f"Skipping {domain}")
             print(f"SSL Domain: {ssl_dom}")
             print("No cert found.")
+            exit(1)
 
         route = row[1]
 
