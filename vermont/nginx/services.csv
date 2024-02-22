@@ -13,3 +13,4 @@ social.goober.cloud,http://10.0.1.15:80
 vault.goober.cloud,http://10.0.1.2:89
 wazuh.goober.cloud,https://10.0.1.16:443
 wiki.goober.cloud,http://10.0.1.11:80
+llama.goober.cloud,http://10.0.1.2:3000
