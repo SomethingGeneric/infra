@@ -16,7 +16,7 @@ ssl_domains = [
     "mattcompton.dev",
     "dizzybox.org",
     "goober.cloud",
-    "champ.support"
+    "champ.support",
     "jnicholls.systems"
 ]
 
