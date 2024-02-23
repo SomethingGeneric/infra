@@ -8,6 +8,9 @@ GENERATE_SECURE_SECRET_CMD="openssl rand --hex 16"
 GENERATE_K256_PRIVATE_KEY_CMD="openssl ecparam --name secp256k1 --genkey --noout --outform DER | tail --bytes=+8 | head --bytes=32 | xxd --plain --cols 32"
 
 PDS_DATADIR="/pds"
+
+[[ ! -d "${PDS_DATADIR}" ]] && mkdir -p "${PDS_DATADIR}"
+
 PDS_DID_PLC_URL="https://plc.directory"
 PDS_BSKY_APP_VIEW_URL="https://api.bsky.app"
 PDS_BSKY_APP_VIEW_DID="did:web:api.bsky.app"
@@ -22,7 +25,7 @@ read PDS_HOSTNAME
 printf "Admin password: "
 read -s PDS_ADMIN_PASSWORD
 
-printf "Admin email: "
+printf "\nAdmin email: "
 read PDS_ADMIN_EMAIL
 
 cat << EOF > "${PDS_DATADIR}/pds.env"
