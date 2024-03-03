@@ -1,0 +1,5 @@
+---
+- import_playbook: deploy-qemu-agent.yml
+- import_playbook: deploy-wazuh.yml
+- import_playbook: remove-zabbix.yml
+- import_playbook: snmp-deploy.yml
