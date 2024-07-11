@@ -1,8 +1,8 @@
-champ.support,http://10.0.1.11:80,www.champ.support
+champ.support,http://10.0.1.11:80
 crystal.goober.cloud,http://10.0.1.23:80
 dizzybox.org,http://10.0.1.23:80,www.dizzybox.org
 git.goober.cloud,http://10.0.1.10:3000
-goober.cloud,http://10.0.1.11:80,www.goober.cloud
+goober.cloud,http://10.0.1.11:80
 graphana.mattcompton.dev,http://10.0.1.8:3030
 mattcompton.dev,http://10.0.1.4:80,www.mattcompton.dev
 ntfy.goober.cloud,http://10.0.1.13:80
