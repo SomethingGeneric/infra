@@ -17,7 +17,7 @@ ssl_domains = [
     "dizzybox.org",
     "goober.cloud",
     "champ.support",
-    "jnicholls.systems"
+    "goombalabs.com"
 ]
 
 with open(fn, 'r') as file:
