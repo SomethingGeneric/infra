@@ -1,4 +1,3 @@
-champ.support,http://10.0.1.11:81
 crystal.goober.cloud,http://10.0.1.23:82
 dizzybox.org,http://10.0.1.23:80,www.dizzybox.org
 git.goober.cloud,http://10.0.1.10:3000
@@ -10,11 +9,8 @@ repo.dizzybox.org,http://10.0.1.23:80
 social.goober.cloud,http://10.0.1.15:80
 vault.goober.cloud,http://10.0.1.2:89
 wazuh.goober.cloud,https://10.0.1.16:443
-wiki.goober.cloud,http://10.0.1.11:84
 llama.goober.cloud,http://10.0.1.2:3000
-ron.goober.cloud,http://10.0.1.2:8080
 bluesky.goober.cloud,http://10.0.1.2:3001
-code.goober.cloud,http://10.0.1.2:8080
 l.goober.cloud,http://10.0.1.12:11434
 syn.goober.cloud,https://10.0.1.20:5001
 goombalabs.com,http://10.0.1.17:80,www.goombalabs.com
