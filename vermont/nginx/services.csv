@@ -4,7 +4,6 @@ dizzybox.org,http://10.0.1.23:80,www.dizzybox.org
 git.goober.cloud,http://10.0.1.10:3000
 goober.cloud,http://10.0.1.11:83
 graphana.mattcompton.dev,http://10.0.1.8:3030
-mattcompton.dev,http://10.0.1.4:80,www.mattcompton.dev
 ntfy.goober.cloud,http://10.0.1.13:80
 pve.mattcompton.dev,https://10.0.1.12:8006
 pve.goober.cloud,https://10.0.1.12:8006
@@ -22,4 +21,4 @@ syn.goober.cloud,https://10.0.1.20:5001
 goombalabs.com,http://10.0.1.17:80,www.goombalabs.com
 kv.goober.cloud,http://10.0.1.2:5000
 njf.mattcompton.dev,http://10.0.1.33:8096
-search.goober.cloud,http://10.0.1.2:8081
+search.goober.cloud,http://10.0.1.35:80
