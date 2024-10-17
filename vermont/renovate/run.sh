@@ -10,11 +10,8 @@ venv/bin/python3 get_repos.py
 
 echo "Updated list of repos"
 
-export PATH="/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH"
-export RENOVATE_CONFIG_FILE="/home/matt/infra/vermont/renovate/config.js"
-
 export LOG_LEVEL="debug"
 
 echo "Spawning renovate"
 
-renovate
+docker run --rm -e GITHUB_COM_TOKEN -e RENOVATE_TOKEN -e LOG_LEVEL -v "./config.js:/usr/src/app/config.js" renovate/renovate
